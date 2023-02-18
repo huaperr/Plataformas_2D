@@ -59,6 +59,8 @@
     <Compile Include="Assets\Scripts\Camera.cs" />
     <Compile Include="Assets\Scripts\Player\p_attack.cs" />
     <Compile Include="Assets\Scripts\Player\p_movement.cs" />
+    <Compile Include="Assets\enemy\enemyBehaviour.cs" />
+    <Compile Include="Assets\enemy\e_movement.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">

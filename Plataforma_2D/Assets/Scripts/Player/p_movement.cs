@@ -41,6 +41,11 @@ public class p_movement : MonoBehaviour
         {
             IsJumping = false;
         }
+
+        if (collision.gameObject.CompareTag("obstacle"))
+        {
+            Destroy(gameObject);
+        }
     }
 
     private void OnCollisionExit2D(Collision2D collision)
@@ -48,11 +53,6 @@ public class p_movement : MonoBehaviour
         if(collision.gameObject.CompareTag("Ground"))
         {
             IsJumping = true;
-        }
-
-        if(collision.gameObject.CompareTag("obstacle"))
-        {
-            Destroy(gameObject);
         }
     }
 }
