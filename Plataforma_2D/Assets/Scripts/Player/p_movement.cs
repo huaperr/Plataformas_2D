@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
+using UnityEngine.SceneManagement;
 
 public class p_movement : MonoBehaviour
 {
@@ -13,14 +14,14 @@ public class p_movement : MonoBehaviour
     public float jump;
     bool IsJumping;
 
+    bool isAlive = true;
+
     bool lookingRight = true;
 
     
      Rigidbody2D rb;
 
      Animator animator;
-
-    public UnityEvent OnLandEvent;
 
     // Start is called before the first frame update
     void Start()
@@ -63,21 +64,22 @@ public class p_movement : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if(collision.gameObject.CompareTag("Ground"))
+        if(collision.gameObject.CompareTag("Ground") || collision.gameObject.CompareTag("wall"))
         {
             IsJumping = false;
             animator.SetBool("isJumping", false);
         }
 
-        if (collision.gameObject.CompareTag("obstacle"))
+        if (collision.gameObject.CompareTag("obstacle") || collision.gameObject.CompareTag("enemy"))
         {
             Destroy(gameObject);
+            SceneManager.LoadScene("SampleScene");
         }
     }
 
     private void OnCollisionExit2D(Collision2D collision)
     {
-        if(collision.gameObject.CompareTag("Ground"))
+        if(collision.gameObject.CompareTag("Ground") || collision.gameObject.CompareTag("wall"))
         {
             
             IsJumping = true;

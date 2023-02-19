@@ -18,7 +18,7 @@ public class e_movement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        transform.Translate(speed * Time.deltaTime, 0, 0);
+        transform.Translate(-speed * Time.deltaTime, 0, 0);
         
     }
 
@@ -26,7 +26,7 @@ public class e_movement : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("wall"))
         {
-            transform.Rotate(0, 0, 180);
+            transform.Rotate(0, 180, 0);
         }
     }
 

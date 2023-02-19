@@ -56,13 +56,18 @@
     <Analyzer Include="C:\Program Files\Microsoft Visual Studio\2022\Professional\Common7\IDE\Extensions\Microsoft\Visual Studio Tools for Unity\Analyzers\Microsoft.Unity.Analyzers.dll" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\enemy\enemyBehaviour.cs" />
+    <Compile Include="Assets\Scripts\enemy\enemyBehaviour.cs" />
     <Compile Include="Assets\Scripts\Camera.cs" />
     <Compile Include="Assets\Scripts\Player\p_attack.cs" />
-    <Compile Include="Assets\enemy\e_movement.cs" />
-    <Compile Include="Assets\Scripts\Player\p_movement.cs" />
-    <Compile Include="Assets\Scripts\Player\win_cond.cs" />
     <Compile Include="Assets\Scripts\Menu\MainMenu.cs" />
+    <Compile Include="Assets\Scripts\Player\win_cond.cs" />
+    <Compile Include="Assets\Scripts\enemy\e_movement.cs" />
+    <Compile Include="Assets\Scripts\Player\p_movement.cs" />
+    <Compile Include="Assets\Scripts\Menu\PauseMenu.cs" />
+    <Compile Include="Assets\Scripts\Plataform.cs" />
+    <Compile Include="Assets\Scripts\Player\Bullety\bullet.cs" />
+    <Compile Include="Assets\Scripts\Player\Bullety\Weapon.cs" />
+    <Compile Include="Assets\Scripts\enemy\enemy.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
